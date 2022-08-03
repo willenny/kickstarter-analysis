@@ -3,11 +3,15 @@
 ## Overview of Project
 
 ### Purpose
-By using Excel and its functions, we are able to help Louise compare how different her fundraising campaign was to other similar campaigns. Our main focus was to determine how her play 'Fever' fared in relation to launch dates and funding goals. Using visuals to present the data, we are not able to give analysis about Louise's play.
+By using Excel and its functions, we are able to help Louise compare how different her fundraising campaign was to other similar campaigns. Our main focus was to determine how her play 'Fever' fared in relation to launch dates and funding goals. Using visuals to present the data, we are now able to give analysis to Louise about her play.
 
 ## Analysis and Challenges
 
 ### Analysis of Outcomes Based on Launch Date
+
+Using my knowledge of pivot tables and graphing in Excel, I visualized campaign outcomes ("successful," "failed," and "canceled") based on launch date.
+
+
 
 ### Analysis of Outcomes Based on Goals
 
