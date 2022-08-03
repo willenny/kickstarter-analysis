@@ -1,6 +1,7 @@
 # Kickstarting with Excel
 
 ## Overview of Project
+By using Excel and its functions, we are able to help Louise compare how different her fundraising campaign was to other similar campaigns. Our main focus was to determine how her play 'Fever' fared in relation to launch dates and funding goals. Using visuals to present the data, we are not able to give analysis about Louise's play.
 
 ### Purpose
 
