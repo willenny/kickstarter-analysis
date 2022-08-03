@@ -9,7 +9,7 @@ By using Excel, its functions, and graphing capabilities we are able to help Lou
 
 ### Analysis of Outcomes Based on Launch Date
 
-Using my knowledge of pivot tables and graphing in Excel, I visualized campaign outcomes of successful, failed, and canceled, based on their launch date. The launch date refers to the month that the fundraising campaign began. Due to originally only being given the launch date as a Unix timestamp, it was essential to convert this into a more easily read date. The following code successfully converted the Unix timestamp in a readable date. `=(((J2/60)/60)/24)+DATE(1970,1,1)`
+Using my knowledge of pivot tables and graphing in Excel, I visualized project outcomes of successful, failed, and canceled, based on their launch date. The launch date refers to the month that the fundraising campaign began. Due to originally only being given the launch date as a Unix timestamp, it was essential to convert this into a more easily read date. The following code successfully converted the Unix timestamp in a readable date. `=(((J2/60)/60)/24)+DATE(1970,1,1)`
 
 Next, I created a pivot table from the KickStarter worksheet, and placed it in a new sheet labeled "Theater Outcomes by Launch Date." When organizing the pivot table, the data is best going to be visualized with 'outcomes' in the Coloumn field, 'Date Created Conversation" in the Rows field, and 'count of outcomes' in the Values field. It was important to include "Parent Category" as a filter so that we can focus solely on 'theather' since that is the category that Louise's play corresponds to. 
 
@@ -30,17 +30,22 @@ Less than 1000, 1000 to 4999, 5000 to 9999, 10000 to 14999, 15000 to 19999, 2000
 
 Using the new COUNTIFS() function, I populated the "Number Successful," "Number Failed," and "Number Canceled" columns by filtering through the Kickstarter "outcome" column, on the "goal" amount column using the goal ranges created, and on the "Subcategory" column using "plays" as the criteria.
 
-E.g. for the Goal of 1000 to 4999 the number of successful campaigns was counted using the following code:
+E.g. for the Goal of 1000 to 4999 the number of successful projects was counted using the following code:
 `=COUNTIFS(Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999", Kickstarter!F:F,"successful", Kickstarter!R:R, "plays")`
 
 COUNTIFS works in the following way: 
 1. Designate what sheet and cells you are searching through. `Kickstarter!D:D`
-2. While looking through Coloumn D (goal), only consider the campaign if the Goal is between $1000 (inclusive) and $4999. `Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999"`
-3. Next search through Coloumn F (outcome) and only consider the campaign if it was successful. `Kickstarter!F:F,"successful"`
-4. Lastly, search through Coloumn R (Subcategory) and only consider the campaign if it was a play. `Kickstarter!R:R, "plays"`
-5. The COUNTIFS functions counts all of the campaigns that meet these three criteria. 
+2. While looking through Coloumn D (goal), only consider the project if the Goal is between $1000 (inclusive) and $4999. `Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999"`
+3. Next search through Coloumn F (outcome) and only consider the project if it was successful. `Kickstarter!F:F,"successful"`
+4. Lastly, search through Coloumn R (Subcategory) and only consider the project if it was a play. `Kickstarter!R:R, "plays"`
+5. The COUNTIFS functions counts all of the project that meet these three criteria. 
 
+I used the SUM() function to populate the "Total Projects" column with the number of successful, failed, and canceled projects for each row.
+Next I calculated the percentage of successful, failed, and canceled projects for each row using the following code: `=ROUND(B2/E2*100,0` where the B Coloumn represented the Number Successful and the E Coloumn represented the Total Projects, giving the Percentage Successful in Coloumn F. 
 
+Lastly, I create a line chart titled "Outcomes Based on Goal" to visualize the relationship between the goal-amount ranges on the x-axis and the percentage of successful, failed, or canceled projects on the y-axis.
+
+![alt text](https://github.com/willenny/kickstarter-analysis/blob/main/Outcomes_vs_Goals.png?raw=true)
 
 ### Challenges and Difficulties Encountered
 
