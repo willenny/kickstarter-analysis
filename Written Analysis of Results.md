@@ -9,7 +9,9 @@ By using Excel and its functions, we are able to help Louise compare how differe
 
 ### Analysis of Outcomes Based on Launch Date
 
-Using my knowledge of pivot tables and graphing in Excel, I visualized campaign outcomes of successful, failed, and canceled, based on their launch date. The launch date refers to the month that the fundraising campaign began. Due to originally only being given the launch date as a Unix timestamp, it was essential to convert this into a more easily read date. To do this, I created a pivot table from the KickStarter worksheet, and placed the it in a new sheet, labeled "Theater Outcomes by Launch Date." When organizing the pivot table, the data is best going to be visualized with 'outcomes' in the Column field and 'Date Created Conversation" in the Rows field. It was important to include "Parent Category" as a filter so that we can focus solely on 'theather' since that is the category that Louise's play corresponds to. 
+Using my knowledge of pivot tables and graphing in Excel, I visualized campaign outcomes of successful, failed, and canceled, based on their launch date. The launch date refers to the month that the fundraising campaign began. Due to originally only being given the launch date as a Unix timestamp, it was essential to convert this into a more easily read date. `=(((J2/60)/60)/24)+DATE(1970,1,1)`
+
+Next, I created a pivot table from the KickStarter worksheet, and placed the it in a new sheet, labeled "Theater Outcomes by Launch Date." When organizing the pivot table, the data is best going to be visualized with 'outcomes' in the Coloumn field and 'Date Created Conversation" in the Rows field. It was important to include "Parent Category" as a filter so that we can focus solely on 'theather' since that is the category that Louise's play corresponds to. 
 
 Filter the pivot table based on "Parent Category" and "Years."
 Place the appropriate pivot table fields in the columns, rows, and values.
