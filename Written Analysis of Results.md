@@ -49,18 +49,29 @@ Lastly, I create a line chart titled "Outcomes Based on Goal" to visualize the r
 
 The line shows that projects that had fundraising goals less than $4999 were successful over 70% of the time. The only other time projects had a success percentage this high was when the fundraising goals was between $35000 to $44999. This would suggest that Louise may have set too high of a fundraising goal, which caused her not to reach her goal. 
 
-Due to the percentage of cancelled being 0% for each goal range, another helpful chart would be a segmented bar chart. (Pictured below)
+Due to the percentage of canceled being 0% for each goal range, another helpful chart would be a segmented bar chart. (Pictured below)
 
 ![alt text](https://github.com/willenny/kickstarter-analysis/blob/main/Outcomes_vs_Goals_Segmented_BarChart.png?raw=true)
 
+For each goal range, you can directly see the percentage comparison between successes and failures by observation at what percentage the bars are segmented.  
+
 ### Challenges and Difficulties Encountered
+
+I was very excited to complete my first project and truthfully did not encounter many issues as I moved through the project. I made sure to refer back to my notes freqeuntly and use online resources to research any additional questions I had. The one problem that did take me a while to figure out was how to sort the goal ranges in my Outcomes vs Goals line chart. Because they were not simply all numbers ("Less than 1000" and "50000 or more"), Sort A to Z and Sort Z to A didn't work. I saw More Sort Options and then the option to sort Manual, which was promising! But the directions of "you can drag items to rearrange them" was vague. After about 30 minutes of trying to click and drag **everything**, then reading multiple online blog posts, then watching several videos, I finally figured it out. It was painful but satisfying in the end. 
 
 ## Results
 
 - What are two conclusions you can draw about the Outcomes based on Launch Date?
 
+1. Fundraising campaigns that began in May had the highest amount of successes. 
+2. Fundraising campaigns that began in December had the lowest amount of successes. 
+
 - What can you conclude about the Outcomes based on Goals?
 
+Projects that had fundraising campaign goals of less than $5000 were the most successful. Conversely, projects that had fundraising campaign goals of $45000 or greater were the least successful. I think it's obvious that the lower your goal is, the more achieveable it is; but also to set realistic goals for your project. 
+
 - What are some limitations of this dataset?
+
+
 
 - What are some other possible tables and/or graphs that we could create?
