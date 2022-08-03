@@ -11,7 +11,7 @@ By using Excel, its functions, and graphing capabilities we are able to help Lou
 
 Using my knowledge of pivot tables and graphing in Excel, I visualized project outcomes of successful, failed, and canceled, based on their launch date. The launch date refers to the month that the fundraising campaign began. Due to originally only being given the launch date as a Unix timestamp, it was essential to convert this into a more easily read date. The following code successfully converted the Unix timestamp in a readable date. `=(((J2/60)/60)/24)+DATE(1970,1,1)`
 
-Next, I created a pivot table from the KickStarter worksheet, and placed it in a new sheet labeled "Theater Outcomes by Launch Date." When organizing the pivot table, the data is best going to be visualized with 'outcomes' in the Coloumn field, 'Date Created Conversation" in the Rows field, and 'count of outcomes' in the Values field. It was important to include "Parent Category" as a filter so that we can focus solely on 'theather' since that is the category that Louise's play corresponds to. 
+Next, I created a pivot table from the KickStarter worksheet, and placed it in a new sheet labeled "Theater Outcomes by Launch Date." When organizing the pivot table, the data is best going to be visualized with 'outcomes' in the Column field, 'Date Created Conversation" in the Rows field, and 'count of outcomes' in the Values field. It was important to include "Parent Category" as a filter so that we can focus solely on 'theather' since that is the category that Louise's play corresponds to. 
 
 Lastly, to visualize the data I needed to create a chart. Due to fact that I wanted to show how the values changed each month, a line chart was the logical choice. (Pictured below)
 
@@ -35,17 +35,23 @@ E.g. for the Goal of 1000 to 4999 the number of successful projects was counted 
 
 COUNTIFS works in the following way: 
 1. Designate what sheet and cells you are searching through. `Kickstarter!D:D`
-2. While looking through Coloumn D (goal), only consider the project if the Goal is between $1000 (inclusive) and $4999. `Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999"`
-3. Next search through Coloumn F (outcome) and only consider the project if it was successful. `Kickstarter!F:F,"successful"`
-4. Lastly, search through Coloumn R (Subcategory) and only consider the project if it was a play. `Kickstarter!R:R, "plays"`
+2. While looking through Column D (goal), only consider the project if the Goal is between $1000 (inclusive) and $4999. `Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999"`
+3. Next search through Column F (outcome) and only consider the project if it was successful. `Kickstarter!F:F,"successful"`
+4. Lastly, search through Column R (Subcategory) and only consider the project if it was a play. `Kickstarter!R:R, "plays"`
 5. The COUNTIFS functions counts all of the project that meet these three criteria. 
 
 I used the SUM() function to populate the "Total Projects" column with the number of successful, failed, and canceled projects for each row.
-Next I calculated the percentage of successful, failed, and canceled projects for each row using the following code: `=ROUND(B2/E2*100,0` where the B Coloumn represented the Number Successful and the E Coloumn represented the Total Projects, giving the Percentage Successful in Coloumn F. 
+Next I calculated the percentage of successful, failed, and canceled projects for each row using the following code: `=ROUND(B2/E2*100,0` where the B Column represented the Number Successful and the E Column represented the Total Projects, giving the Percentage Successful in Column F. 
 
-Lastly, I create a line chart titled "Outcomes Based on Goal" to visualize the relationship between the goal-amount ranges on the x-axis and the percentage of successful, failed, or canceled projects on the y-axis.
+Lastly, I create a line chart titled "Outcomes Based on Goal" to visualize the relationship between the goal-amount ranges on the x-axis and the percentage of successful, failed, or canceled projects on the y-axis. To do this I assigned 'goals" in the Rows field, and 'Sum of Percentage Successful', 'Sum of Percentage Failed', and 'Sum of Percentage Canceled' in the Values field, which automatically generated " Summation of Values" into the Column field. (Pictured below) 
 
 ![alt text](https://github.com/willenny/kickstarter-analysis/blob/main/Outcomes_vs_Goals.png?raw=true)
+
+The line shows that projects that had fundraising goals less than $4999 were successful over 70% of the time. The only other time projects had a success percentage this high was when the fundraising goals was between $35000 to $44999. This would suggest that Louise may have set too high of a fundraising goal, which caused her not to reach her goal. 
+
+Due to the percentage of cancelled being 0% for each goal range, another helpful chart would be a segmented bar chart. (Pictured below)
+
+![alt text](https://github.com/willenny/kickstarter-analysis/blob/main/Outcomes_vs_Goals_Segmented_BarChart.png?raw=true)
 
 ### Challenges and Difficulties Encountered
 
