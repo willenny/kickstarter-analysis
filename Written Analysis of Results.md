@@ -14,7 +14,10 @@ Using my knowledge of pivot tables and graphing in Excel, I visualized campaign 
 Next, I created a pivot table from the KickStarter worksheet, and placed it in a new sheet labeled "Theater Outcomes by Launch Date." When organizing the pivot table, the data is best going to be visualized with 'outcomes' in the Coloumn field, 'Date Created Conversation" in the Rows field, and 'count of outcomes' in the Values field. It was important to include "Parent Category" as a filter so that we can focus solely on 'theather' since that is the category that Louise's play corresponds to. 
 
 Lastly, to visual the data I needed to create a chart. Due to fact that I wanted to show how a value changed each month, a line chart was the logical choice.
-!(/assets/images/Theater_Outcomes_vs_Launch.png)
+
+![alt text](https://github.com/willenny/kickstarter-analysis/blob/[branch]/Theater_Outcomes_vs_Launch.png?raw=true)
+
+!(Theater_Outcomes_vs_Launch.png)
 
 
 
