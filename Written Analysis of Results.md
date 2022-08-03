@@ -15,9 +15,7 @@ Next, I created a pivot table from the KickStarter worksheet, and placed it in a
 
 Lastly, to visual the data I needed to create a chart. Due to fact that I wanted to show how a value changed each month, a line chart was the logical choice.
 
-![alt text](https://github.com/willenny/kickstarter-analysis/blob/[branch]/Theater_Outcomes_vs_Launch.png?raw=true)
-
-!(Theater_Outcomes_vs_Launch.png)
+![alt text](https://github.com/willenny/kickstarter-analysis/blob/main/Theater_Outcomes_vs_Launch.png?raw=true)
 
 
 
