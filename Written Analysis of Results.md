@@ -28,16 +28,16 @@ Goal, Number Successful, Number Failed, Number Canceled, Total Projects, Percent
 In the “Goal” column, the following dollar-amount ranges were created so projects could be grouped based on their goal amount: 
 Less than 1000, 1000 to 4999, 5000 to 9999, 10000 to 14999, 15000 to 19999, 20000 to 24999, 25000 to 29999, 30000 to 34999, 35000 to 39999, 40000 to 44999, 45000 to 49999, and 50000 or More
 
-Using the new COUNTIFS() function, I populated the "Number Successful," "Number Failed," and "Number Canceled" columns by filtering on the Kickstarter "outcome" column, on the "goal" amount column using the ranges created in Step 3, and on the "Subcategory" column using "plays" as the criteria.
+Using the new COUNTIFS() function, I populated the "Number Successful," "Number Failed," and "Number Canceled" columns by filtering through the Kickstarter "outcome" column, on the "goal" amount column using the goal ranges created, and on the "Subcategory" column using "plays" as the criteria.
 
 E.g. for the Goal of 1000 to 4999 the number of successful campaigns was counted using the following code:
 `=COUNTIFS(Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999", Kickstarter!F:F,"successful", Kickstarter!R:R, "plays")`
 
 COUNTIFS works in the following way: 
 1. Designate what sheet and cells you are searching through. `Kickstarter!D:D`
-2. While looking through Coloumn D, only consider the campaign if the Goal is between $1000 (inclusive) and $4999. `Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999"`
-3. Next search through Coloumn F and only consider the campaign if it was successful. `Kickstarter!F:F,"successful"`
-4. Lastly, search through Coloumn R and only consider the campaign if it was a play. `Kickstarter!R:R, "plays"`
+2. While looking through Coloumn D (goal), only consider the campaign if the Goal is between $1000 (inclusive) and $4999. `Kickstarter!D:D,">=1000",Kickstarter!D:D,"<4999"`
+3. Next search through Coloumn F (outcome) and only consider the campaign if it was successful. `Kickstarter!F:F,"successful"`
+4. Lastly, search through Coloumn R (Subcategory) and only consider the campaign if it was a play. `Kickstarter!R:R, "plays"`
 5. The COUNTIFS functions counts all of the campaigns that meet these three criteria. 
 
 
