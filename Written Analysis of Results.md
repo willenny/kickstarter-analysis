@@ -72,6 +72,8 @@ Projects that had fundraising campaign goals of less than $5000 were the most su
 
 - What are some limitations of this dataset?
 
-
+Some limitations to this dataset are... (come back to this).
 
 - What are some other possible tables and/or graphs that we could create?
+
+As I showed in the Outcomes based on Goals section, I also included a segmented bar chart to visually show and compare the percentage of successful and failed plays, due to the canceled being 0% for each month. 
