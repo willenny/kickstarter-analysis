@@ -72,8 +72,7 @@ Projects that had fundraising campaign goals of less than $5000 were the most su
 
 - What are some limitations of this dataset?
 
-Some limitations to this dataset are... (come back to this).
-
+Although it may not immediately seem like a limitation, the amount of data collected could be seen as excessive. Having over 4000 datapoints allows the possibily of outliers. All of these projects deserve to be respected on their own but the large collection of data from wide spreads of categories and subcategories could potentially allow outliers that are not reprentative of the data to influence the results or graphs. 
 - What are some other possible tables and/or graphs that we could create?
 
 As I showed in the Outcomes based on Goals section, I also included a segmented bar chart to visually show and compare the percentage of successful and failed plays, due to the canceled being 0% for each month. 
